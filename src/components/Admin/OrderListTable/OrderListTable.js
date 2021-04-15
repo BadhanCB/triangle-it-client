@@ -2,7 +2,7 @@ import React from 'react';
 
 const OrderListTable = () => {
     return (
-        <div className='col-lg-9 col-md-9 col-sm-12 p-4'>
+        <div className='col-lg-9 col-md-8 col-sm-12 p-4'>
             <table class="table">
                 <thead>
                     <tr>

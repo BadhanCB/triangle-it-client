@@ -2,7 +2,7 @@ import React from 'react';
 
 const AddServiceForm = () => {
     return (
-        <div className='col-lg-9 col-md-9 col-sm-12 p-4'>
+        <div className='col-lg-9 col-md-8 col-sm-12 p-4'>
             <form>
                 <div class="mb-3">
                     <label for="title" class="form-label">Service Title</label>

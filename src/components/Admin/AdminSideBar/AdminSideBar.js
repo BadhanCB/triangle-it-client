@@ -4,7 +4,7 @@ import './AdminSideBar.css';
 
 const AdminSideBar = () => {
     return (
-        <aside className='col-lg-3 col-md-3 col-sm-12 p-4'>
+        <aside className='col-lg-3 col-md-4 col-sm-12 p-4'>
             <div className="container-fluid">
             <ul className='sidebar-list border-end border-info border-3'>
                 <li>
