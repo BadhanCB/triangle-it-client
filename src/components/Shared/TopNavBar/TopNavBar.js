@@ -14,25 +14,25 @@ const TopNavBar = () => {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <Link to='/home' className="nav-link fs-3 active me-4">Home</Link>
+                            <Link to='/home' className="nav-link fs-4 active me-4">Home</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to='/about' className="nav-link fs-3 me-4">About Us</Link>
+                            <Link to='/about' className="nav-link fs-4 me-4">About Us</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to='/services' className="nav-link fs-3 me-4">Services</Link>
+                            <Link to='/services' className="nav-link fs-4 me-4">Services</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to='/projects' className="nav-link fs-3 me-4">Projects</Link>
+                            <Link to='/projects' className="nav-link fs-4 me-4">Projects</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to='/blog' className="nav-link fs-3 me-4">Blog</Link>
+                            <Link to='/blog' className="nav-link fs-4 me-4">Blog</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to='/admin' className="nav-link fs-3 me-4">Admin</Link>
+                            <Link to='/admin' className="nav-link fs-4 me-4">Admin</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to='/login' className="nav-link fs-3 me-4">Login</Link>
+                            <Link to='/login' className="nav-link fs-4 me-4">Login</Link>
                         </li>
                     </ul>
                     </div>
