@@ -24,7 +24,7 @@ const testimonialsData = [
 
 const Testimonials = () => {
     return (
-        <section>
+        <section className='mt-5'>
             <p className='text-muted fw-bold fs-5 text-center'>Testimonials</p>
             <div className='row'>
                 {

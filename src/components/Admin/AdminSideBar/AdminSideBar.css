@@ -1,0 +1,7 @@
+.sidebar-list{
+    list-style: none;
+}
+.sidebar-item{
+    text-decoration: none;
+    line-height: 50px;
+}
