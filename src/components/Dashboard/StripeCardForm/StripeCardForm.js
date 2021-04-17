@@ -28,6 +28,7 @@ const StripeCardForm = () => {
             const newBooking = {
                 ...user,
                 bookedServiceId: selectedService._id,
+                bookedService: selectedService.title,
                 paymentId: paymentMethod.id,
                 paymentCard: paymentMethod.card,
                 status: 'pending',
