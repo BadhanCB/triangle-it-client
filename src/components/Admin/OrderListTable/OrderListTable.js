@@ -7,7 +7,7 @@ const OrderListTable = () => {
     const [user] = useContext(UserContext);
 
     useEffect(() => {
-        fetch('http://localhost:5000/allBooking', {
+        fetch('https://cryptic-waters-19850.herokuapp.com/allBooking', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({email: user.email}),
@@ -17,8 +17,8 @@ const OrderListTable = () => {
     }, [user.email])
 
     return (
-        <div className='col-lg-9 col-md-8 col-sm-12 p-4'>
-            <table class="table">
+        <div className='col-lg-9 col-md-8 col-sm-12 p-4 table-responsive'>
+            <table class="table table-dark table-striped">
                 <thead>
                     <tr>
                         <th scope="col">Name</th>

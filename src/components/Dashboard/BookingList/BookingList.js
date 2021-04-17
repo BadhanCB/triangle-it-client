@@ -9,7 +9,7 @@ const BookingList = () => {
     const [user] = useContext(UserContext);
 
     useEffect(() => {
-        fetch('http://localhost:5000/allBooking', {
+        fetch('https://cryptic-waters-19850.herokuapp.com/allBooking', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email: user.email }),
@@ -20,7 +20,7 @@ const BookingList = () => {
     return (
         <div className='container'>
             <header>
-                <AdminTopBar><p>Booking List</p></AdminTopBar>
+                <AdminTopBar><h4>Booking List</h4></AdminTopBar>
             </header>
             <main className='row'>
                 <DashBoardSidebar />

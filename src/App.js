@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import AddService from './components/Admin/AddService/AddService';
 import MakeAdmin from './components/Admin/MakeAdmin/MakeAdmin';
+import ManageService from './components/Admin/ManageService/ManageService';
 import OrderList from './components/Admin/OrderList/OrderList';
 import Book from './components/Dashboard/Book/Book';
 import BookingList from './components/Dashboard/BookingList/BookingList';
@@ -40,6 +41,9 @@ function App() {
               </PrivateRoute>
               <PrivateRoute path='/admin/makeadmin'>
                 <MakeAdmin />
+              </PrivateRoute>
+              <PrivateRoute path='/admin/manageservice'>
+                <ManageService />
               </PrivateRoute>
               <PrivateRoute path='/userprofile'>
                 <UserProfile />

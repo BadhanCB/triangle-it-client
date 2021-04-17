@@ -34,7 +34,7 @@ const StripeCardForm = () => {
                 status: 'pending',
                 submissionDate: new Date(),
             }
-            fetch('http://localhost:5000/addBooking', {
+            fetch('https://cryptic-waters-19850.herokuapp.com/addBooking', {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify(newBooking),

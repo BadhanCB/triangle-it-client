@@ -7,7 +7,7 @@ const Review = () => {
     return (
         <div className='container'>
             <header>
-                <AdminTopBar><p>Review</p></AdminTopBar>
+                <AdminTopBar><h4>Review</h4></AdminTopBar>
             </header>
             <main className='row'>
                 <DashBoardSidebar />

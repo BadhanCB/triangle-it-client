@@ -8,7 +8,7 @@ const TopNavBar = () => {
     const [isAdmin, setIsAdmin] = useState(false);
     useState(() => {
         if (user.email) {
-            fetch(`http://localhost:5000/isAdmin?email=${user.email}`, {
+            fetch(`https://cryptic-waters-19850.herokuapp.com/isAdmin?email=${user.email}`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
             })

@@ -5,7 +5,7 @@ const OrderTableRow = ({ order }) => {
 
     const handleChange = () => {
         const selectedStatus = document.getElementById('status').value;
-        fetch('http://localhost:5000/changeBookingStatus', {
+        fetch('https://cryptic-waters-19850.herokuapp.com/changeBookingStatus', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({status: selectedStatus, id: _id}),
@@ -23,7 +23,7 @@ const OrderTableRow = ({ order }) => {
             <td>{email}</td>
             <td>{bookedService}</td>
             <td>
-                <select onChange={handleChange} id='status' class="form-select">
+                <select onChange={handleChange} id='status' class="form-select" style={{width: '115px'}}>
                     <option selected>{status}</option>
                     <option value="pending">pending</option>
                     <option value="on going">on going</option>

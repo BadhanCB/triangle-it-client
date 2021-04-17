@@ -8,7 +8,7 @@ const Book = () => {
         <div className='container'>
             <header>
                 <AdminTopBar>
-                    <p>Book A Service</p>
+                    <h4>Book A Service</h4>
                 </AdminTopBar>
             </header>
             <main className='row'>

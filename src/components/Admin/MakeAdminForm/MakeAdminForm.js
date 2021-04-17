@@ -8,7 +8,7 @@ const MakeAdminForm = () => {
 
     const handleSubmit = event => {
         event.preventDefault();
-        fetch(`http://localhost:5000/addAdmin?email=${email}`, {
+        fetch(`https://cryptic-waters-19850.herokuapp.com/addAdmin?email=${email}`, {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
         })

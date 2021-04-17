@@ -14,7 +14,7 @@ const ReviewForm = () => {
     }
     const handleSubmit = event => {
         event.preventDefault();
-        fetch('http://localhost:5000/addReview', {
+        fetch('https://cryptic-waters-19850.herokuapp.com/addReview', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(review),
