@@ -1,34 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import TestimonialCard from '../../Shared/TestimonialCard/TestimonialCard';
 
-const testimonialsData = [
-    {
-        userName: 'NNNNNNNNNNNNNNNNNNNNNNNNNN',
-        comment: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid laboriosam explicabo aperiam! Illum perferendis vitae temporibus vel ad ipsa nemo voluptatibus a, quibusdam, quo voluptate recusandae doloribus, harum ipsum. Repellat?',
-        userImg: '',
-        submitDate: '',
-    },
-    {
-        userName: 'NNNNNNNNNNNNNNNNNNNN',
-        comment: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid laboriosam explicabo aperiam! Illum perferendis vitae temporibus vel ad ipsa nemo voluptatibus a, quibusdam, quo voluptate recusandae doloribus, harum ipsum. Repellat?',
-        userImg: '',
-        submitDate: '',
-    },
-    {
-        userName: 'NNNNNNNNNNNNNNNNNNN',
-        comment: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid laboriosam explicabo aperiam! Illum perferendis vitae temporibus vel ad ipsa nemo voluptatibus a, quibusdam, quo voluptate recusandae doloribus, harum ipsum. Repellat?',
-        userImg: '',
-        submitDate: '',
-    }
-]
-
 const Testimonials = () => {
+    const [testimonials, setTestimonials] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:5000/allReviews')
+        .then(res => res.json())
+        .then(data => setTestimonials(data))
+    }, [])
+
     return (
         <section className='mt-5'>
             <p className='text-muted fw-bold fs-5 text-center'>Testimonials</p>
             <div className='row'>
                 {
-                    testimonialsData.map(testimonial => <TestimonialCard testimonial={testimonial} />)
+                    testimonials.map(testimonial => <TestimonialCard testimonial={testimonial} key={testimonial._id} />)
                 }
             </div>
         </section>

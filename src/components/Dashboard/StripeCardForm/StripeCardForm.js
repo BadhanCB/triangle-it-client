@@ -43,7 +43,9 @@ const StripeCardForm = () => {
                 if(result){
                     alert('Booking Successful');
                     setSelectedService({});
-                    history.push('/');
+                    history.push('/dashboard/bookinglist');
+                } else{
+                    alert('Unexpected Error!');
                 }
             });
         }
