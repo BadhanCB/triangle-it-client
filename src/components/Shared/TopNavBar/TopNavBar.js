@@ -51,7 +51,7 @@ const TopNavBar = () => {
                                         <Link to='/admin/orderlist' className="nav-link fs-4 me-4">Admin Panel</Link>
                                     </li>
                                     : <li className="nav-item">
-                                        <Link to='/dashboard/orderlist' className="nav-link fs-4 me-4">Dashboard</Link>
+                                        <Link to='/dashboard/book' className="nav-link fs-4 me-4">Dashboard</Link>
                                     </li>)
                             }
 

@@ -1,10 +1,12 @@
 import { faLongArrowAltLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { UserContext } from '../../../App';
 import logo from '../../../images/code.png';
 
 const AdminTopBar = (props) => {
+    const [user] = useContext(UserContext);
     return (
         <nav className='row'>
             <div className="col-md-3 d-flex text-center" style={{ height: '80px' }}>
@@ -21,8 +23,8 @@ const AdminTopBar = (props) => {
                 }
             </div>
             <div className="col-md-2">
-                <h4>User Name</h4>
-                <p>User Email</p>
+                <h4>{user.name}</h4>
+                <p>{user.email}</p>
             </div>
         </nav>
     );

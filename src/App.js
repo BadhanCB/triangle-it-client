@@ -4,6 +4,7 @@ import './App.css';
 import AddService from './components/Admin/AddService/AddService';
 import MakeAdmin from './components/Admin/MakeAdmin/MakeAdmin';
 import OrderList from './components/Admin/OrderList/OrderList';
+import Book from './components/Dashboard/Book/Book';
 import Home from './components/Home/Home/Home';
 import LogIn from './components/LogIn/LogIn';
 import PageNotFound from './components/PageNotFound/PageNotFound';
@@ -11,41 +12,48 @@ import PrivateRoute from './components/Shared/PrivateRoute/PrivateRoute';
 import UserProfile from './components/UserProfile/UserProfile';
 
 export const UserContext = createContext();
+export const ServiceContext = createContext();
 
 function App() {
   const [user, setUser] = useState({});
+  const [selectedService, setSelectedService] = useState({});
 
   return (
     <div>
       <UserContext.Provider value={[user, setUser]}>
-      <Router>
-        <Switch>
-          <Route exact path='/'>
-            <Home />
-          </Route>
-          <Route path='/home'>
-            <Home />
-          </Route>
-          <PrivateRoute path='/admin/orderlist'>
-            <OrderList />
-          </PrivateRoute>
-          <PrivateRoute path='/admin/addservice'>
-            <AddService />
-          </PrivateRoute>
-          <PrivateRoute path='/admin/makeadmin'>
-            <MakeAdmin />
-          </PrivateRoute>
-          <PrivateRoute path='/userprofile'>
-            <UserProfile />
-          </PrivateRoute>
-          <Route path='/login'>
-            <LogIn />
-          </Route>
-          <Route path='*'>
-            <PageNotFound />
-          </Route>
-        </Switch>
-      </Router>
+        <ServiceContext.Provider value={[selectedService, setSelectedService]}>
+          <Router>
+            <Switch>
+              <Route exact path='/'>
+                <Home />
+              </Route>
+              <Route path='/home'>
+                <Home />
+              </Route>
+              <PrivateRoute path='/admin/orderlist'>
+                <OrderList />
+              </PrivateRoute>
+              <PrivateRoute path='/admin/addservice'>
+                <AddService />
+              </PrivateRoute>
+              <PrivateRoute path='/admin/makeadmin'>
+                <MakeAdmin />
+              </PrivateRoute>
+              <PrivateRoute path='/userprofile'>
+                <UserProfile />
+              </PrivateRoute>
+              <PrivateRoute path='/dashboard/book'>
+                <Book />
+              </PrivateRoute>
+              <Route path='/login'>
+                <LogIn />
+              </Route>
+              <Route path='*'>
+                <PageNotFound />
+              </Route>
+            </Switch>
+          </Router>
+        </ServiceContext.Provider>
       </UserContext.Provider>
     </div>
   );

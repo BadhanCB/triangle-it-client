@@ -1,6 +1,6 @@
 import React from 'react';
 import AdminSideBar from '../AdminSideBar/AdminSideBar';
-import AdminTopBar from '../AdminTopBar/AdminTopBar';
+import AdminTopBar from '../../Shared/AdminTopBar/AdminTopBar';
 import MakeAdminForm from '../MakeAdminForm/MakeAdminForm';
 
 const MakeAdmin = () => {

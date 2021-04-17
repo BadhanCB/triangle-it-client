@@ -2,24 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import ServiceCard from '../../Shared/ServiceCard/ServiceCard';
 
-// const serviceData = [
-//     {
-//         name: 'E-Commerce Website Design',
-//         price: '560',
-//         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum a, laudantium nostrum consectetur cupiditate reprehenderit quidem beatae veniam rerum, iusto temporibus minus similique, doloremque commodi repudiandae distinctio? Itaque, ad labore.'
-//     },
-//     {
-//         name: 'Complete Website Development',
-//         price: '1050',
-//         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum a, laudantium nostrum consectetur cupiditate reprehenderit quidem beatae veniam rerum, iusto temporibus minus similique, doloremque commodi repudiandae distinctio? Itaque, ad labore.'
-//     },
-//     {
-//         name: 'ReactJS Web App',
-//         price: '730',
-//         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum a, laudantium nostrum consectetur cupiditate reprehenderit quidem beatae veniam rerum, iusto temporibus minus similique, doloremque commodi repudiandae distinctio? Itaque, ad labore.'
-//     }
-// ]
-
 const Services = () => {
     const [services, setServices] = useState([]);
 

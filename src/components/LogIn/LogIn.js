@@ -30,7 +30,7 @@ const LogIn = () => {
                     email: result.email,
                 })
                 history.replace(from);
-            });
+            }).catch(() => alert('Failed to Login'));
     }
 
     const handleSignUp = () => {
@@ -58,7 +58,7 @@ const LogIn = () => {
                 email: result.email,
             })
             history.replace(from);
-        })
+        }).catch(() => alert('Failed to Login'));
     }
 
     const handleFacebookSignIn = () => {
@@ -69,7 +69,7 @@ const LogIn = () => {
                 email: result.email,
             })
             history.replace(from);
-        })
+        }).catch(() => alert('Failed to Login'));
     }
 
     return (
