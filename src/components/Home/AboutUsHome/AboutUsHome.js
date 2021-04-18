@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom';
 
 const AboutUsHome = () => {
     return (
-        <section className='text-center my-5 bg-light py-3'>
+        <section className='text-center bg-grey' style={{padding: '100px 0'}}>
             <p className='text-muted fw-bold fs-5'>OUR COMPANY</p>
             <h3 className='w-50 mx-auto'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur, exercitationem.</h3>
-            <div className="row mt-5">
+            <div className="row mt-5 p-3">
                 <div className="col-lg-5 col-md-5 col-sm-12 offset-lg-1 offset-md-1">
                     <div className='d-flex align-items-center justify-content-center'>
                         <h1 className='text-success' style={{fontSize: '100px'}}>32</h1>

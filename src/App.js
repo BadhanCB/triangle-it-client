@@ -5,6 +5,7 @@ import AddService from './components/Admin/AddService/AddService';
 import MakeAdmin from './components/Admin/MakeAdmin/MakeAdmin';
 import ManageService from './components/Admin/ManageService/ManageService';
 import OrderList from './components/Admin/OrderList/OrderList';
+import AllServices from './components/AllServices/AllServices';
 import Book from './components/Dashboard/Book/Book';
 import BookingList from './components/Dashboard/BookingList/BookingList';
 import Review from './components/Dashboard/Review/Review';
@@ -57,6 +58,9 @@ function App() {
               <PrivateRoute path='/dashboard/review'>
                 <Review />
               </PrivateRoute>
+              <Route path='/services'>
+                <AllServices />
+              </Route>
               <Route path='/login'>
                 <LogIn />
               </Route>

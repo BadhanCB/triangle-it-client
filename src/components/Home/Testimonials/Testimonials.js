@@ -11,7 +11,7 @@ const Testimonials = () => {
     }, [])
 
     return (
-        <section className='mt-5'>
+        <section className='mt-5 px-5 bg-grey' style={{padding: '100px 0'}}>
             <p className='text-muted fw-bold fs-5 text-center'>Testimonials</p>
             <div className='row'>
                 {
