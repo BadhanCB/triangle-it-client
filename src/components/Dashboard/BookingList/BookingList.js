@@ -7,14 +7,20 @@ import DashBoardSidebar from '../DashBoardSidebar/DashBoardSidebar';
 const BookingList = () => {
     const [bookingList, setBookingList] = useState([]);
     const [user] = useContext(UserContext);
+    const [isTransferingData, setIsTransferingData] = useState(false);
 
     useEffect(() => {
+        setIsTransferingData(true);
         fetch('https://cryptic-waters-19850.herokuapp.com/allBooking', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email: user.email }),
-        }).then(res => res.json())
-            .then(data => setBookingList(data));
+        })
+            .then(res => res.json())
+            .then(data => {
+                setBookingList(data);
+                setIsTransferingData(false);
+            });
     }, [user.email]);
 
     return (
@@ -25,11 +31,20 @@ const BookingList = () => {
             <main className='row'>
                 <DashBoardSidebar />
                 <div className="col-lg-9 col-md-7 col-sm-12 p-3 bg-light">
-                    <div className="row">
-                        {
-                            bookingList.map(booking => <BookingListCard booking={booking} key={booking._id} />)
-                        }
-                    </div>
+                    {
+                        isTransferingData
+                            ? <div className='d-flex justify-content-center'>
+                                <div className="spinner-border text-warning" style={{ width: '10rem', height: '10rem' }} role="status">
+                                    <span className="visually-hidden">Loading...</span>
+                                </div>
+                            </div>
+                            : <div className="row">
+                                {
+                                    bookingList.map(booking => <BookingListCard booking={booking} key={booking._id} />)
+                                }
+                            </div>
+                    }
+
                 </div>
             </main>
         </div>

@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const OrderTableRow = ({ order }) => {
     const { name, email, bookedService, status, _id } = order;
 
     const handleChange = () => {
-        const selectedStatus = document.getElementById('status').value;
+        const selectedStatus = document.getElementById(_id).value;
         fetch('https://cryptic-waters-19850.herokuapp.com/changeBookingStatus', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
@@ -23,7 +23,7 @@ const OrderTableRow = ({ order }) => {
             <td>{email}</td>
             <td>{bookedService}</td>
             <td>
-                <select onChange={handleChange} id='status' class="form-select" style={{width: '115px'}}>
+                <select onChange={handleChange} id={_id} class="form-select" style={{width: '115px'}}>
                     <option selected>{status}</option>
                     <option value="pending">pending</option>
                     <option value="on going">on going</option>

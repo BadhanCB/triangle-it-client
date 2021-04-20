@@ -3,7 +3,7 @@ import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import { ServiceContext, UserContext } from '../../../App';
 import { useHistory } from 'react-router-dom';
 
-const StripeCardForm = () => {
+const StripeCardForm = ({ setIsTransferingData }) => {
     const stripe = useStripe();
     const elements = useElements();
     const [user] = useContext(UserContext);
@@ -24,7 +24,7 @@ const StripeCardForm = () => {
         if (error) {
             alert(error.message);
         } else {
-            // console.log('[PaymentMethod]', paymentMethod);
+            setIsTransferingData(true);
             const newBooking = {
                 ...user,
                 bookedServiceId: selectedService._id,
@@ -34,21 +34,27 @@ const StripeCardForm = () => {
                 status: 'pending',
                 submissionDate: new Date(),
             }
+
             fetch('https://cryptic-waters-19850.herokuapp.com/addBooking', {
                 method: 'POST',
-                headers: {'Content-Type': 'application/json'},
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(newBooking),
             })
-            .then(res => res.json())
-            .then(result => {
-                if(result){
-                    alert('Booking Successful');
-                    setSelectedService({});
-                    history.push('/dashboard/bookinglist');
-                } else{
+                .then(res => res.json())
+                .then(result => {
+                    if (result) {
+                        alert('Booking Successful');
+                        setSelectedService({});
+                        history.push('/dashboard/bookinglist');
+                        setIsTransferingData(false);
+                    } else {
+                        alert('Unexpected Error!');
+                        setIsTransferingData(false);
+                    }
+                }).catch(() => {
                     alert('Unexpected Error!');
-                }
-            });
+                    setIsTransferingData(false);
+                })
         }
     };
 

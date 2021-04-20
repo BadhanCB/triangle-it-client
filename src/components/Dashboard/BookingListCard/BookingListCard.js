@@ -12,7 +12,7 @@ const BookingListCard = ({ booking }) => {
     return (
         <div className='col-lg-6 col-md-12 col-sm-12 p-3'>
             <div className='shadow bg-white p-3 rounded-3'>
-                <div className='d-flex justify-content-between'>
+                <div className='d-flex justify-content-between align-items-center'>
                     <img src={`data:${serviceInfo?.image?.contentType};base64, ${serviceInfo?.image?.img}`} style={{width: '100px'}} className='img-fluid rounded-3' alt=""/>
                     <h5 className='p-3 bg-light text-center'>{status}</h5>
                 </div>
