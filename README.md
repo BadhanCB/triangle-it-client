@@ -7,9 +7,11 @@ This is a React SPA with react router and hosted to the firebase.
 This is a Full-stack Web application project.
 
 >## Core Features
-- A normal user can book a service. User must need to Sign In/ Sign Up for booking.
-- User can see the working status of taken service.
-- User also add a review.
-- Admin can add Service, manage Service(Update, delete).
-- Admin can change working status of all bookings.
-- Admin can also add a new admin.
+- Developed with react, react-router, Firebase, Express.js, MongoDB, and
+React Stripe.
+- Implemented Password Authentication, Google Sign-In, and Facebook Login
+- Designed Admin Panel for An authenticated user can order services, see 
+order progress, and can give a review.
+- Implemented Stripe payment integration to add Card numbers.
+- Developed Rest APIs with Express.js for The admin can add services, manage 
+services, change order progress, and can add a new admin.
