@@ -128,8 +128,8 @@ const LogIn = () => {
                             }
                             {
                                 isNewUser
-                                    ? <p>Already Have an Account! <span onClick={() => setIsNewUser(!isNewUser)} style={{ cursor: 'pointer' }}>Log In</span></p>
-                                    : <p>Don't Have any Account! <span onClick={() => setIsNewUser(!isNewUser)} style={{ cursor: 'pointer' }}>Create</span></p>
+                                    ? <p>Already Have an Account! <span onClick={() => setIsNewUser(!isNewUser)} style={{ cursor: 'pointer', borderBottom: '1px solid grey', color: 'blue' }}>Log In</span></p>
+                                    : <p>Don't Have any Account! <span onClick={() => setIsNewUser(!isNewUser)} style={{ cursor: 'pointer', borderBottom: '1px solid grey', color: 'blue' }}>Create</span></p>
                             }
                         </div>
                         <h5 className='text-center'>Or</h5>
