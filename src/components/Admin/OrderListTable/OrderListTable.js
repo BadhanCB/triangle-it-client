@@ -33,9 +33,9 @@ const OrderListTable = () => {
                     : <table class="table table-dark table-striped">
                         <thead>
                             <tr>
-                                <th scope="col">Name</th>
-                                <th scope="col">Email</th>
-                                <th scope="col">Service</th>
+                                <th scope="col">Client Info</th>
+                                <th scope="col">Order Details</th>
+                                <th scope="col">Project Description</th>
                                 <th scope="col">Status</th>
                             </tr>
                         </thead>
