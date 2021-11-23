@@ -2,6 +2,7 @@ import React from 'react';
 import { createContext, useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
+import AboutUs from './components/AboutUs/AboutUs';
 import AddService from './components/Admin/AddService/AddService';
 import MakeAdmin from './components/Admin/MakeAdmin/MakeAdmin';
 import ManageService from './components/Admin/ManageService/ManageService';
@@ -34,6 +35,9 @@ function App() {
                 </Route>
                 <Route path='/home'>
                   <Home />
+                </Route>
+                <Route path='/about'>
+                  <AboutUs />
                 </Route>
                 <PrivateRoute path='/admin/orderlist'>
                   <OrderList />
