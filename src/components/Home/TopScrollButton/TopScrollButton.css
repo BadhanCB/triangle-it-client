@@ -1,6 +1,6 @@
 #topScrollButton{
     position: fixed;
-    right: 30px;
+    left: 30px;
     bottom: 30px;
     border-radius: 5px;
     border: none;
