@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../../../images/code.png';
+import logo from '../../../../images/logo-lg.png';
 
 const CompanyAddress = () => {
     return (

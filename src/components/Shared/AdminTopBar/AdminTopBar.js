@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../../App';
-import logo from '../../../images/code.png';
+import logo from '../../../images/logo-lg.png';
 
 const AdminTopBar = (props) => {
     const [user] = useContext(UserContext);

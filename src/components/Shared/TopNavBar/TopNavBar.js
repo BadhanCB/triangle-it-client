@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../../App';
-import logo from '../../../images/code.png';
+import logo from '../../../images/logo-lg.png';
 const TopNavBar = () => {
     const [user] = useContext(UserContext);
     const [isAdmin, setIsAdmin] = useState(false);
@@ -54,7 +54,7 @@ const TopNavBar = () => {
 
                     : <nav className="navbar navbar-expand-lg navbar-light bg-transperent">
                         <div className="container-fluid">
-                            <img src={logo} alt="" className="img-fluid navbar-brand" style={{ width: '60px' }} />
+                            <img src={logo} alt="" className="img-fluid navbar-brand" style={{ height: '100px' }} />
                             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span className="navbar-toggler-icon"></span>
                             </button>
