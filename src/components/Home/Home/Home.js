@@ -7,6 +7,7 @@ import HomeBanner from '../HomeBanner/HomeBanner';
 import Projects from '../Projects/Projects';
 import Services from '../Services/Services';
 import Testimonials from '../Testimonials/Testimonials';
+import TopScrollButton from '../TopScrollButton/TopScrollButton';
 
 const Home = () => {
     return (
@@ -19,6 +20,7 @@ const Home = () => {
             <Projects />
             <Achievements />
             <Footer />
+            <TopScrollButton />
         </main>
     );
 };
