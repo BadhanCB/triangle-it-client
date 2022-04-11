@@ -6,7 +6,7 @@ const TeammateCard = ({ member }) => {
     return (
         <div className="col-lg-3 col-md-4 col-sm-6">
             <div className="card h-100">
-                <img src={profilePic} className="card-img-top" />
+                <img src={profilePic} alt={name} className="card-img-top" />
                 <div className="card-body">
                     <h5 className="card-title">{name}</h5>
                     <p className="card-text">{role}</p>

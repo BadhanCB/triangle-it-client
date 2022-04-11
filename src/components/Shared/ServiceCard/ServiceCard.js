@@ -21,10 +21,10 @@ const ServiceCard = ({ service }) => {
     const [props, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 5, tension: 350, friction: 40 } }))
 
     return (
-        <div className="col-lg-4 col-md-6 col-sm-12 p-3" >
+        <div className="col-lg-4 col-md-6 col-sm-12 p-3">
             <animated.div
                 onClick={handleClick}
-                className='shadow p-3 bg-white'
+                className='shadow p-3 bg-white h-100'
                 style={{ borderRadius: '15px', cursor: 'pointer', transform: props.xys.interpolate(trans) }}
                 onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
                 onMouseLeave={() => set({ xys: [0, 0, 1] })}
