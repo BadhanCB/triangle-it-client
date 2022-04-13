@@ -1,5 +1,6 @@
 import React from 'react';
 import './TopScrollButton.css';
+import {ChevronDoubleUpIcon} from "@heroicons/react/outline";
 
 const TopScrollButton = () => {
     const scrollToTop = () => {
@@ -7,7 +8,10 @@ const TopScrollButton = () => {
     }
     return (
         <div>
-            <button id="topScrollButton" onClick={scrollToTop} >^</button>
+            <button id="topScrollButton" onClick={scrollToTop} className="p-2">
+            <ChevronDoubleUpIcon className="icon text-blue-500" />
+            Back To Top
+            </button>
         </div>
     );
 };
