@@ -13,6 +13,10 @@ const Services = () => {
             .then(data => {
                 setServices(data);
                 setIsReceivingData(false);
+            }).catch(e => {
+                setIsReceivingData(false);
+                alert(e);
+                window.location.reload();
             });
     }, [])
 

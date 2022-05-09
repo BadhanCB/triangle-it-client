@@ -13,6 +13,9 @@ const Testimonials = () => {
                 setTestimonials(data);
                 setIsReceivingData(false);
             })
+            .catch(e => {
+                setIsReceivingData(false);
+            })
     }, [])
 
     return (

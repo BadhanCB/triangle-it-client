@@ -4,20 +4,17 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../../App';
 import logo from '../../../images/logo-lg.png';
+import './AdminTopBar.css';
 
 const AdminTopBar = (props) => {
     const [user] = useContext(UserContext);
     return (
         <nav className='row'>
-            <div className="col-md-3 d-flex text-center" style={{ height: '80px' }}>
-                <Link to='/' className='me-3 text-secondary'><FontAwesomeIcon className='fs-1 d-block' icon={faLongArrowAltLeft} />Back</Link>
+            <div className="col-md-4 d-flex text-center" style={{ height: '80px' }}>
+                <Link to='/' className='me-3 text-secondary bg-secondary text-white d-flex gap-2 p-2 back-btn rounded-3 mt-2 justify-content-center align-items-center'><FontAwesomeIcon className='fs-1 d-block' icon={faLongArrowAltLeft} />Back</Link>
                 <img src={logo} className='img-fluid' alt="" />
-                <div>
-                    <h3>Triangle</h3>
-                    <h3>IT</h3>
-                </div>
             </div>
-            <div className="col-md-7 d-flex justify-content-lg-start justify-content-md-center align-items-center">
+            <div className="col-md-6 d-flex justify-content-lg-start justify-content-md-center align-items-center">
                 {
                     props.children
                 }
