@@ -1,0 +1,152 @@
+[debug] [2022-05-27T07:37:01.464Z] ----------------------------------------------------------------------
+[debug] [2022-05-27T07:37:01.466Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ASUS\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-05-27T07:37:01.467Z] CLI Version:   10.6.0
+[debug] [2022-05-27T07:37:01.467Z] Platform:      win32
+[debug] [2022-05-27T07:37:01.467Z] Node Version:  v16.13.0
+[debug] [2022-05-27T07:37:01.568Z] Time:          Fri May 27 2022 13:37:01 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-05-27T07:37:01.569Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-05-27T07:37:01.584Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2022-05-27T07:37:01.746Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-05-27T07:37:01.746Z] > authorizing via signed-in user (badhancsesastc112@gmail.com)
+[debug] [2022-05-27T07:37:01.746Z] [iam] checking project triangle-it for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-05-27T07:37:01.747Z] > refreshing access token with scopes: []
+[debug] [2022-05-27T07:37:01.748Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-05-27T07:37:02.232Z] <<< HTTP RESPONSE 200 {"date":"Fri, 27 May 2022 07:37:00 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-05-27T07:37:02.392Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/triangle-it:testIamPermissions [none]
+[debug] [2022-05-27T07:37:02.392Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/triangle-it:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-05-27T07:37:02.778Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2022-05-27T07:37:02.778Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2022-05-27T07:37:03.698Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/triangle-it:testIamPermissions 200
+[debug] [2022-05-27T07:37:03.698Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/triangle-it:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-05-27T07:37:03.699Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/triangle-it [none]
+[debug] [2022-05-27T07:37:04.266Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/triangle-it 200
+[debug] [2022-05-27T07:37:04.267Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/triangle-it {"projectId":"triangle-it","projectNumber":"594671846502","displayName":"triangle-it","name":"projects/triangle-it","resources":{"hostingSite":"triangle-it"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'triangle-it'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-05-27T07:37:04.271Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/triangle-it [none]
+[debug] [2022-05-27T07:37:04.838Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/triangle-it 200
+[debug] [2022-05-27T07:37:04.839Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/triangle-it {"projectId":"triangle-it","projectNumber":"594671846502","displayName":"triangle-it","name":"projects/triangle-it","resources":{"hostingSite":"triangle-it"},"state":"ACTIVE"}
+[debug] [2022-05-27T07:37:04.841Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/594671846502/sites/triangle-it/versions [none]
+[debug] [2022-05-27T07:37:04.841Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/594671846502/sites/triangle-it/versions {"config":{"rewrites":[{"glob":"**","path":"/index.html"}],"headers":[{"glob":"/service-worker.js","headers":{"Cache-Control":"no-cache"}}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-05-27T07:37:07.143Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/594671846502/sites/triangle-it/versions 200
+[debug] [2022-05-27T07:37:07.144Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/594671846502/sites/triangle-it/versions {"name":"projects/594671846502/sites/triangle-it/versions/d506c4871a57bcf5","status":"CREATED","config":{"headers":[{"headers":{"Cache-Control":"no-cache"},"glob":"/service-worker.js"}],"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[triangle-it]: beginning deploy... 
+[info] i  hosting[triangle-it]: found 26 files in build 
+[debug] [2022-05-27T07:37:07.157Z] [hosting] uploading with 200 concurrency
+[debug] [2022-05-27T07:37:07.553Z] [hosting] hash cache [YnVpbGQ] stored for 26 files
+[debug] [2022-05-27T07:37:07.554Z] [hosting][hash queue][FINAL] {"max":390,"min":4,"avg":30.03846153846154,"active":0,"complete":26,"success":26,"errored":0,"retried":0,"total":26,"elapsed":395}
+[debug] [2022-05-27T07:37:07.554Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/594671846502/sites/triangle-it/versions/d506c4871a57bcf5:populateFiles [none]
+[debug] [2022-05-27T07:37:07.554Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/594671846502/sites/triangle-it/versions/d506c4871a57bcf5:populateFiles {"files":{"/favicon.ico":"f0d0b930ac49b32c110ad35af3c983959c79d33b302764f8c62e0de551b281de","/logo192.png":"7a3fd1e1831ffb9b145b2909a7291681b073c4c62a4a5801bc87c889dd575fbe","/logo512.png":"85fd130c7a029e77e9f774d5d32cfb1424721cec4d98127d0a22a2b7971d4d35","/manifest.json":"5c997de1364b8be939319fa9209abd77f2caf7f8844999a9e2e9173f844e7840","/robots.txt":"b2090cf9761ef60aa06e4fab97679bd43dfa5e5df073701ead5879d7c68f1ec5","/asset-manifest.json":"3d4c7cef96d17f86834b82758dfd811fae757a45b9c83064ebab13aa594998d0","/precache-manifest.7adfa44dc8845a8ea621a69102a697d2.js":"ebab929187f870ed2947bda020472878417b9c211450476072f2505a7795347d","/index.html":"0564da3f736c0c9075905fb63bb147238e0d87e96c67151466393b6d02e48796","/service-worker.js":"4142aa497273a2c371bd5b3802ba971d4a5da1a63b01960d42e5d589fe284b41","/static/css/main.2ef812e2.chunk.css":"84b8d21edb125abf154c0f82d7bd306fba8f614f6e62bd9f675b3ab62f3e8dc1","/static/css/main.2ef812e2.chunk.css.map":"342a3f4840a5a16354fd1b87625fc5ee82ebb0475c284bdc0e339f4fa1c38095","/static/js/2.ec3aa671.chunk.js.LICENSE.txt":"57df689a8dbaee5fe7710db71839155db6f44266ce55b54c6fbe842195f427dd","/static/js/3.b20b8173.chunk.js":"3478042ab98855db46289b6e51257d81c6d8a181c91916a046c08573eb12dced","/static/js/runtime-main.2e4ee631.js":"7f71bcad18dc0c08c840981629a6020a82761d7443bb8cf0ea8463d2e931cff5","/static/js/3.b20b8173.chunk.js.map":"029145043dfb1273a870fda4e4fe4625f3061bc797fb11b6b538a82865ea2953","/static/js/main.c61e44c5.chunk.js":"4426bd9ee7459eef12781e4ee8eb6e65bc4c7d802f586ee3334572113227b98c","/static/js/runtime-main.2e4ee631.js.map":"0265d82e4cbfaee0945235a4013d170cb2b614725be9d91cf326f876bdc0c98c","/static/media/logo-lg.b0b01229.png":"8ef27f86e9f94e720654e238135c2c2085d803bcddbfbc84f40ae3410b18d0d7","/static/media/badhan.9655455f.jpg":"4b321b852773429ea8ad6cfcadd44c578793e226c6e8987148bcefb26935219b","/static/media/dipangker.c699fb13.jpg":"e114d8e12115d32975ca82171051a739feebc0392823c6b85dbe3b7ce2931815","/static/media/bristy.3cc32f8e.jpg":"97eec55153c84d3a0d330b23c14c24ca7973cd2cfc9ade3f022480a710987ea2","/static/js/main.c61e44c5.chunk.js.map":"5a98f0cff189bc8e81b47f5c4dfed1637b78b171c68b4c116beee3a2aa048b1c","/static/media/tusher.320532eb.jpg":"ce2ca0b9df1415baaed1aa5d00a6ab4a6ff59f66022bbf2423448cd0bf8db71d","/static/js/2.ec3aa671.chunk.js":"6d79a2a6937cd28b6280da08d66a283c1e4abdd9426b4a61afe5b7a6a3ceb161","/static/media/knowledge-haven.web.app_.f3e3147d.png":"e05e2a9bedc7470e9a3796d5cd0e97941fa6175b6a01692d8b55b4a39d1c1402","/static/js/2.ec3aa671.chunk.js.map":"ca9b8dd6df80d66581ee0f79a37c2ea80d0aaa2ef8f2766a8e9010738a386a48"}}
+[debug] [2022-05-27T07:37:09.502Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/594671846502/sites/triangle-it/versions/d506c4871a57bcf5:populateFiles 200
+[debug] [2022-05-27T07:37:09.502Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/594671846502/sites/triangle-it/versions/d506c4871a57bcf5:populateFiles {"uploadRequiredHashes":["4142aa497273a2c371bd5b3802ba971d4a5da1a63b01960d42e5d589fe284b41","ebab929187f870ed2947bda020472878417b9c211450476072f2505a7795347d","7f71bcad18dc0c08c840981629a6020a82761d7443bb8cf0ea8463d2e931cff5","0265d82e4cbfaee0945235a4013d170cb2b614725be9d91cf326f876bdc0c98c","3d4c7cef96d17f86834b82758dfd811fae757a45b9c83064ebab13aa594998d0","ca9b8dd6df80d66581ee0f79a37c2ea80d0aaa2ef8f2766a8e9010738a386a48","3478042ab98855db46289b6e51257d81c6d8a181c91916a046c08573eb12dced","84b8d21edb125abf154c0f82d7bd306fba8f614f6e62bd9f675b3ab62f3e8dc1","342a3f4840a5a16354fd1b87625fc5ee82ebb0475c284bdc0e339f4fa1c38095","4426bd9ee7459eef12781e4ee8eb6e65bc4c7d802f586ee3334572113227b98c","6d79a2a6937cd28b6280da08d66a283c1e4abdd9426b4a61afe5b7a6a3ceb161","029145043dfb1273a870fda4e4fe4625f3061bc797fb11b6b538a82865ea2953","5a98f0cff189bc8e81b47f5c4dfed1637b78b171c68b4c116beee3a2aa048b1c","0564da3f736c0c9075905fb63bb147238e0d87e96c67151466393b6d02e48796"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files"}
+[debug] [2022-05-27T07:37:09.505Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/4142aa497273a2c371bd5b3802ba971d4a5da1a63b01960d42e5d589fe284b41 [none]
+[debug] [2022-05-27T07:37:09.505Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/4142aa497273a2c371bd5b3802ba971d4a5da1a63b01960d42e5d589fe284b41 [stream]
+[debug] [2022-05-27T07:37:09.506Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/ebab929187f870ed2947bda020472878417b9c211450476072f2505a7795347d [none]
+[debug] [2022-05-27T07:37:09.506Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/ebab929187f870ed2947bda020472878417b9c211450476072f2505a7795347d [stream]
+[debug] [2022-05-27T07:37:09.507Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/7f71bcad18dc0c08c840981629a6020a82761d7443bb8cf0ea8463d2e931cff5 [none]
+[debug] [2022-05-27T07:37:09.507Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/7f71bcad18dc0c08c840981629a6020a82761d7443bb8cf0ea8463d2e931cff5 [stream]
+[debug] [2022-05-27T07:37:09.508Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/0265d82e4cbfaee0945235a4013d170cb2b614725be9d91cf326f876bdc0c98c [none]
+[debug] [2022-05-27T07:37:09.508Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/0265d82e4cbfaee0945235a4013d170cb2b614725be9d91cf326f876bdc0c98c [stream]
+[debug] [2022-05-27T07:37:09.509Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/3d4c7cef96d17f86834b82758dfd811fae757a45b9c83064ebab13aa594998d0 [none]
+[debug] [2022-05-27T07:37:09.509Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/3d4c7cef96d17f86834b82758dfd811fae757a45b9c83064ebab13aa594998d0 [stream]
+[debug] [2022-05-27T07:37:09.510Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/ca9b8dd6df80d66581ee0f79a37c2ea80d0aaa2ef8f2766a8e9010738a386a48 [none]
+[debug] [2022-05-27T07:37:09.510Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/ca9b8dd6df80d66581ee0f79a37c2ea80d0aaa2ef8f2766a8e9010738a386a48 [stream]
+[debug] [2022-05-27T07:37:09.511Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/3478042ab98855db46289b6e51257d81c6d8a181c91916a046c08573eb12dced [none]
+[debug] [2022-05-27T07:37:09.511Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/3478042ab98855db46289b6e51257d81c6d8a181c91916a046c08573eb12dced [stream]
+[debug] [2022-05-27T07:37:09.512Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/84b8d21edb125abf154c0f82d7bd306fba8f614f6e62bd9f675b3ab62f3e8dc1 [none]
+[debug] [2022-05-27T07:37:09.512Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/84b8d21edb125abf154c0f82d7bd306fba8f614f6e62bd9f675b3ab62f3e8dc1 [stream]
+[debug] [2022-05-27T07:37:09.513Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/342a3f4840a5a16354fd1b87625fc5ee82ebb0475c284bdc0e339f4fa1c38095 [none]
+[debug] [2022-05-27T07:37:09.513Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/342a3f4840a5a16354fd1b87625fc5ee82ebb0475c284bdc0e339f4fa1c38095 [stream]
+[debug] [2022-05-27T07:37:09.513Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/4426bd9ee7459eef12781e4ee8eb6e65bc4c7d802f586ee3334572113227b98c [none]
+[debug] [2022-05-27T07:37:09.513Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/4426bd9ee7459eef12781e4ee8eb6e65bc4c7d802f586ee3334572113227b98c [stream]
+[debug] [2022-05-27T07:37:09.514Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/6d79a2a6937cd28b6280da08d66a283c1e4abdd9426b4a61afe5b7a6a3ceb161 [none]
+[debug] [2022-05-27T07:37:09.514Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/6d79a2a6937cd28b6280da08d66a283c1e4abdd9426b4a61afe5b7a6a3ceb161 [stream]
+[debug] [2022-05-27T07:37:09.515Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/029145043dfb1273a870fda4e4fe4625f3061bc797fb11b6b538a82865ea2953 [none]
+[debug] [2022-05-27T07:37:09.515Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/029145043dfb1273a870fda4e4fe4625f3061bc797fb11b6b538a82865ea2953 [stream]
+[debug] [2022-05-27T07:37:09.518Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/5a98f0cff189bc8e81b47f5c4dfed1637b78b171c68b4c116beee3a2aa048b1c [none]
+[debug] [2022-05-27T07:37:09.518Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/5a98f0cff189bc8e81b47f5c4dfed1637b78b171c68b4c116beee3a2aa048b1c [stream]
+[debug] [2022-05-27T07:37:09.518Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/0564da3f736c0c9075905fb63bb147238e0d87e96c67151466393b6d02e48796 [none]
+[debug] [2022-05-27T07:37:09.518Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/0564da3f736c0c9075905fb63bb147238e0d87e96c67151466393b6d02e48796 [stream]
+[debug] [2022-05-27T07:37:09.519Z] [hosting][populate queue][FINAL] {"max":1953,"min":1953,"avg":1953,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1967}
+[debug] [2022-05-27T07:37:09.519Z] [hosting] uploads queued: 14
+[debug] [2022-05-27T07:37:11.397Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/342a3f4840a5a16354fd1b87625fc5ee82ebb0475c284bdc0e339f4fa1c38095 200
+[debug] [2022-05-27T07:37:11.397Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/342a3f4840a5a16354fd1b87625fc5ee82ebb0475c284bdc0e339f4fa1c38095 [stream]
+[debug] [2022-05-27T07:37:11.536Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/4142aa497273a2c371bd5b3802ba971d4a5da1a63b01960d42e5d589fe284b41 200
+[debug] [2022-05-27T07:37:11.536Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/4142aa497273a2c371bd5b3802ba971d4a5da1a63b01960d42e5d589fe284b41 [stream]
+[debug] [2022-05-27T07:37:11.919Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/0564da3f736c0c9075905fb63bb147238e0d87e96c67151466393b6d02e48796 200
+[debug] [2022-05-27T07:37:11.920Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/0564da3f736c0c9075905fb63bb147238e0d87e96c67151466393b6d02e48796 [stream]
+[debug] [2022-05-27T07:37:12.046Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/7f71bcad18dc0c08c840981629a6020a82761d7443bb8cf0ea8463d2e931cff5 200
+[debug] [2022-05-27T07:37:12.046Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/7f71bcad18dc0c08c840981629a6020a82761d7443bb8cf0ea8463d2e931cff5 [stream]
+[debug] [2022-05-27T07:37:12.050Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/ebab929187f870ed2947bda020472878417b9c211450476072f2505a7795347d 200
+[debug] [2022-05-27T07:37:12.050Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/ebab929187f870ed2947bda020472878417b9c211450476072f2505a7795347d [stream]
+[debug] [2022-05-27T07:37:12.471Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/3478042ab98855db46289b6e51257d81c6d8a181c91916a046c08573eb12dced 200
+[debug] [2022-05-27T07:37:12.471Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/3478042ab98855db46289b6e51257d81c6d8a181c91916a046c08573eb12dced [stream]
+[debug] [2022-05-27T07:37:12.496Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/029145043dfb1273a870fda4e4fe4625f3061bc797fb11b6b538a82865ea2953 200
+[debug] [2022-05-27T07:37:12.496Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/029145043dfb1273a870fda4e4fe4625f3061bc797fb11b6b538a82865ea2953 [stream]
+[debug] [2022-05-27T07:37:12.598Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/3d4c7cef96d17f86834b82758dfd811fae757a45b9c83064ebab13aa594998d0 200
+[debug] [2022-05-27T07:37:12.598Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/3d4c7cef96d17f86834b82758dfd811fae757a45b9c83064ebab13aa594998d0 [stream]
+[debug] [2022-05-27T07:37:12.602Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/0265d82e4cbfaee0945235a4013d170cb2b614725be9d91cf326f876bdc0c98c 200
+[debug] [2022-05-27T07:37:12.602Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/0265d82e4cbfaee0945235a4013d170cb2b614725be9d91cf326f876bdc0c98c [stream]
+[debug] [2022-05-27T07:37:12.751Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/4426bd9ee7459eef12781e4ee8eb6e65bc4c7d802f586ee3334572113227b98c 200
+[debug] [2022-05-27T07:37:12.752Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/4426bd9ee7459eef12781e4ee8eb6e65bc4c7d802f586ee3334572113227b98c [stream]
+[debug] [2022-05-27T07:37:12.890Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/6d79a2a6937cd28b6280da08d66a283c1e4abdd9426b4a61afe5b7a6a3ceb161 200
+[debug] [2022-05-27T07:37:12.890Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/6d79a2a6937cd28b6280da08d66a283c1e4abdd9426b4a61afe5b7a6a3ceb161 [stream]
+[debug] [2022-05-27T07:37:13.174Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/84b8d21edb125abf154c0f82d7bd306fba8f614f6e62bd9f675b3ab62f3e8dc1 200
+[debug] [2022-05-27T07:37:13.174Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/84b8d21edb125abf154c0f82d7bd306fba8f614f6e62bd9f675b3ab62f3e8dc1 [stream]
+[debug] [2022-05-27T07:37:13.180Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/5a98f0cff189bc8e81b47f5c4dfed1637b78b171c68b4c116beee3a2aa048b1c 200
+[debug] [2022-05-27T07:37:13.180Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/5a98f0cff189bc8e81b47f5c4dfed1637b78b171c68b4c116beee3a2aa048b1c [stream]
+[debug] [2022-05-27T07:37:14.011Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/ca9b8dd6df80d66581ee0f79a37c2ea80d0aaa2ef8f2766a8e9010738a386a48 200
+[debug] [2022-05-27T07:37:14.011Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/triangle-it/versions/d506c4871a57bcf5/files/ca9b8dd6df80d66581ee0f79a37c2ea80d0aaa2ef8f2766a8e9010738a386a48 [stream]
+[debug] [2022-05-27T07:37:14.012Z] [hosting][upload queue][FINAL] {"max":4508,"min":1893,"avg":3005.285714285714,"active":0,"complete":14,"success":14,"errored":0,"retried":0,"total":14,"elapsed":4510}
+[info] +  hosting[triangle-it]: file upload complete 
+[debug] [2022-05-27T07:37:14.013Z] [hosting] deploy completed after 6868ms
+[debug] [2022-05-27T07:37:14.016Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "headers": [
+        {
+          "source": "/service-worker.js",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "no-cache"
+            }
+          ]
+        }
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "triangle-it"
+    },
+    "site": "triangle-it",
+    "version": "projects/594671846502/sites/triangle-it/versions/d506c4871a57bcf5"
+  }
+]
+[info] i  hosting[triangle-it]: finalizing version... 
+[debug] [2022-05-27T07:37:14.018Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/594671846502/sites/triangle-it/versions/d506c4871a57bcf5 updateMask=status
+[debug] [2022-05-27T07:37:14.018Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/594671846502/sites/triangle-it/versions/d506c4871a57bcf5 {"status":"FINALIZED"}
+[debug] [2022-05-27T07:37:16.057Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/594671846502/sites/triangle-it/versions/d506c4871a57bcf5 200
+[debug] [2022-05-27T07:37:16.057Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/594671846502/sites/triangle-it/versions/d506c4871a57bcf5 {"name":"projects/594671846502/sites/triangle-it/versions/d506c4871a57bcf5","status":"FINALIZED","config":{"headers":[{"headers":{"Cache-Control":"no-cache"},"glob":"/service-worker.js"}],"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-05-27T07:37:04.899236Z","createUser":{"email":"badhancsesastc112@gmail.com"},"finalizeTime":"2022-05-27T07:37:14.314245Z","finalizeUser":{"email":"badhancsesastc112@gmail.com"}}
+[debug] [2022-05-27T07:37:16.057Z] [hosting] finalized version for triangle-it:[object Object]
+[info] +  hosting[triangle-it]: version finalized 
+[info] i  hosting[triangle-it]: releasing new version... 
+[debug] [2022-05-27T07:37:16.059Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/594671846502/sites/triangle-it/releases versionName=projects%2F594671846502%2Fsites%2Ftriangle-it%2Fversions%2Fd506c4871a57bcf5
+[debug] [2022-05-27T07:37:16.059Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/594671846502/sites/triangle-it/releases {"message":null}
+[debug] [2022-05-27T07:37:18.022Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/594671846502/sites/triangle-it/releases 200
+[debug] [2022-05-27T07:37:18.022Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/594671846502/sites/triangle-it/releases {"name":"projects/594671846502/sites/triangle-it/releases/1653637035512714","version":{"name":"projects/594671846502/sites/triangle-it/versions/d506c4871a57bcf5","status":"FINALIZED","config":{"headers":[{"headers":{"Cache-Control":"no-cache"},"glob":"/service-worker.js"}],"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-05-27T07:37:04.899236Z","createUser":{"email":"badhancsesastc112@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AOh14GgBI3LwQ_zdz6gKur9BEKDz7AXMM2QM_gHkITEy"},"finalizeTime":"2022-05-27T07:37:14.314245Z","finalizeUser":{"email":"badhancsesastc112@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AOh14GgBI3LwQ_zdz6gKur9BEKDz7AXMM2QM_gHkITEy"}},"type":"DEPLOY","releaseTime":"2022-05-27T07:37:15.512714798Z","releaseUser":{"email":"badhancsesastc112@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AOh14GgBI3LwQ_zdz6gKur9BEKDz7AXMM2QM_gHkITEy"}}
+[debug] [2022-05-27T07:37:18.022Z] [hosting] release: {"name":"projects/594671846502/sites/triangle-it/releases/1653637035512714","version":{"name":"projects/594671846502/sites/triangle-it/versions/d506c4871a57bcf5","status":"FINALIZED","config":{"headers":[{"headers":{"Cache-Control":"no-cache"},"glob":"/service-worker.js"}],"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-05-27T07:37:04.899236Z","createUser":{"email":"badhancsesastc112@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AOh14GgBI3LwQ_zdz6gKur9BEKDz7AXMM2QM_gHkITEy"},"finalizeTime":"2022-05-27T07:37:14.314245Z","finalizeUser":{"email":"badhancsesastc112@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AOh14GgBI3LwQ_zdz6gKur9BEKDz7AXMM2QM_gHkITEy"}},"type":"DEPLOY","releaseTime":"2022-05-27T07:37:15.512714798Z","releaseUser":{"email":"badhancsesastc112@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AOh14GgBI3LwQ_zdz6gKur9BEKDz7AXMM2QM_gHkITEy"}}
+[info] +  hosting[triangle-it]: release complete 

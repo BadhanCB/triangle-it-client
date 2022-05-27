@@ -14,6 +14,7 @@ import Review from './components/Dashboard/Review/Review';
 import Home from './components/Home/Home/Home';
 import LogIn from './components/LogIn/LogIn';
 import PageNotFound from './components/PageNotFound/PageNotFound';
+import Projects from './components/Projects/Projects/Projects';
 import PrivateRoute from './components/Shared/PrivateRoute/PrivateRoute';
 import UserProfile from './components/UserProfile/UserProfile';
 
@@ -65,6 +66,9 @@ function App() {
                 </PrivateRoute>
                 <Route path='/services'>
                   <AllServices />
+                </Route>
+                <Route path='/projects'>
+                  <Projects />
                 </Route>
                 <Route path='/login'>
                   <LogIn />
