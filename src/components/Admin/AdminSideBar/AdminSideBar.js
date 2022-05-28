@@ -14,10 +14,16 @@ const AdminSideBar = () => {
                     <Link to='/admin/addservice' className='sidebar-item' >Add Service</Link>
                 </li>
                 <li>
+                    <Link to='/admin/addproject' className='sidebar-item' >Add Project</Link>
+                </li>
+                <li>
                     <Link to='/admin/makeadmin' className='sidebar-item' >Make Admin</Link>
                 </li>
                 <li>
                     <Link to='/admin/manageservice' className='sidebar-item' >Manage Services</Link>
+                </li>
+                <li>
+                    <Link to='/admin/manageproject' className='sidebar-item' >Manage Projects</Link>
                 </li>
             </ul>
             </div>
