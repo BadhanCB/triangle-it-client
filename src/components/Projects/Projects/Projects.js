@@ -1,101 +1,49 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import TopNavBar from "../../Shared/TopNavBar/TopNavBar";
 
 import img from "../../../images/knowledge-haven.web.app_.png";
 import ProjectCard from "../ProjectCard/ProjectCard";
 
-const projects = [
-    {
-        name: "Kanwledge Haven",
-        img,
-        liveUrl: "https:\\www.google.com",
-        githubUrl: "https:\\www.github.com",
-        isFeatured: false,
-    },
-    {
-        name: "Kanwledge Haven",
-        img,
-        liveUrl: "https:\\www.google.com",
-        githubUrl: "https:\\www.github.com",
-        isFeatured: true,
-    },
-    {
-        name: "Kanwledge Haven",
-        img,
-        liveUrl: "https:\\www.google.com",
-        githubUrl: "https:\\www.github.com",
-        isFeatured: false,
-    },
-    {
-        name: "Kanwledge Haven",
-        img,
-        liveUrl: "https:\\www.google.com",
-        githubUrl: "https:\\www.github.com",
-        isFeatured: true,
-    },
-    {
-        name: "Kanwledge Haven",
-        img,
-        liveUrl: "https:\\www.google.com",
-        githubUrl: "https:\\www.github.com",
-        isFeatured: false,
-    },
-    {
-        name: "Kanwledge Haven",
-        img,
-        liveUrl: "https:\\www.google.com",
-        githubUrl: "https:\\www.github.com",
-        isFeatured: true,
-    },
-    {
-        name: "Kanwledge Haven",
-        img,
-        liveUrl: "https:\\www.google.com",
-        githubUrl: "https:\\www.github.com",
-        isFeatured: false,
-    },
-    {
-        name: "Kanwledge Haven",
-        img,
-        liveUrl: "https:\\www.google.com",
-        githubUrl: "https:\\www.github.com",
-        isFeatured: true,
-    },
-    {
-        name: "Kanwledge Haven",
-        img,
-        liveUrl: "https:\\www.google.com",
-        githubUrl: "https:\\www.github.com",
-        isFeatured: false,
-    },
-    {
-        name: "Kanwledge Haven",
-        img,
-        liveUrl: "https:\\www.google.com",
-        githubUrl: "https:\\www.github.com",
-        isFeatured: true,
-    },
-];
-
 const Projects = () => {
-    console.log(projects);
+    const [projects, setProjects] = useState([]);
+
+    useEffect(() => {
+        fetch("https://cryptic-waters-19850.herokuapp.com/projects", {
+            method: "GET",
+        })
+            .then((res) => res.json())
+            .then((documents) => setProjects(documents));
+    }, []);
+
     return (
         <>
             <header>
                 <TopNavBar />
             </header>
             <section className="container py-5">
-                <div className="row g-4">
-                    {projects.map((proj, index) => (
-                        <ProjectCard
-                            name={proj.name}
-                            img={proj.img}
-                            liveUrl={proj.liveUrl}
-                            githubUrl={proj.githubUrl}
-                            key={proj.name + index}
-                        />
-                    ))}
-                </div>
+                {projects.length ? (
+                    <div className="row g-4">
+                        {projects.map((proj) => (
+                            <ProjectCard
+                                projectName={proj.projectName}
+                                image={proj.image}
+                                liveUrl={proj.liveUrl}
+                                githubUrl={proj.githubUrl}
+                                key={proj._id}
+                            />
+                        ))}
+                    </div>
+                ) : (
+                    <div className="w-100 text-center">
+                        <div
+                        class="spinner-border"
+                        style={{width: "7rem", height: "7rem"}}
+                        role="status"
+                    >
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    </div>
+                )}
             </section>
         </>
     );
