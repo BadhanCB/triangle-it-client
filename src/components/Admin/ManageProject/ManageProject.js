@@ -1,6 +1,7 @@
 import React from "react";
 import AdminTopBar from "../../Shared/AdminTopBar/AdminTopBar";
 import AdminSideBar from "../AdminSideBar/AdminSideBar";
+import ProjectListArea from "./ProjectListArea";
 
 const ManageProject = () => {
     return (
@@ -10,7 +11,7 @@ const ManageProject = () => {
             </AdminTopBar>
             <div className="row">
                 <AdminSideBar />
-                <h1>All Projects</h1>
+                <ProjectListArea />
             </div>
         </main>
     );

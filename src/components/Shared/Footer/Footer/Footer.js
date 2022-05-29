@@ -27,7 +27,7 @@ const Footer = () => {
     ]
 
     return (
-        <footer className='container row'>
+        <footer className='container row mx-auto'>
             <CompanyAddress />
             <FooterList heading='IT Services' listItems={companyServices} />
             <FooterList heading='Quick Links' listItems={quickLinks} />
