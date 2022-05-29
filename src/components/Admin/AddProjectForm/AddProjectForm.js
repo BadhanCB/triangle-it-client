@@ -137,7 +137,7 @@ const AddProjectForm = () => {
                         onChange={handleInput}
                     />
                     <label className="form-check-label" htmlFor="isFeatured">
-                        Featured Image
+                        Featured Project
                     </label>
                 </div>
                 <button

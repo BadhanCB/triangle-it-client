@@ -4,7 +4,7 @@ import logo from '../../../images/logo-lg.png';
 
 const HomeBanner = () => {
     return (
-        <section className='bg-lightDark' style={{minHeight: '100vh'}}>
+        <section className='bg-lightDark' style={{height: '100vh'}}>
             <div className='row p-4 container mx-auto d-flex h-100 w-100 align-items-center justify-content-evenly'>
                 <div className="col-lg-6 col-md-6 col-sm-12 d-flex align-items-center">
                     <div className="mx-auto">

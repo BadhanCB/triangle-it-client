@@ -93,7 +93,7 @@ const StripeCardForm = ({ setIsTransferingData }) => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="mb-5">
             <div class="mb-3">
                 <label for="front-end-lang" class="form-label">Front-End Language</label>
                 <select class="form-control" id="front-end-lang" onChange={resetAllInputCondition}>
@@ -141,7 +141,7 @@ const StripeCardForm = ({ setIsTransferingData }) => {
                 }
             </div>
             <CardElement />
-            <button type="submit" className='mt-3 btn btn-success ms-auto' disabled={!stripe}>Pay</button>
+            <button type="submit" className='mt-3 btn btn-success ms-auto' disabled={!stripe}>Book The Service</button>
         </form>
     );
 };

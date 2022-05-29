@@ -25,6 +25,7 @@
 .image-border{
     position: relative;
     cursor: pointer;
+    overflow: hidden;
 }
 
 .image-border img{
@@ -33,6 +34,7 @@
     border-radius: 7px;
     object-fit: cover;
     object-position: top;
+    filter: brightness(0.9);
     transition: object-position 1s ease-in-out 0ms, transform 500ms ease 0ms;
     transform-origin: center;
 }
