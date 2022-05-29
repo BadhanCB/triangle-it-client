@@ -3,12 +3,14 @@ import { ServiceContext, UserContext } from '../../../App';
 import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
 import StripeCardForm from '../StripeCardForm/StripeCardForm';
+import { useHistory } from 'react-router-dom';
 
 const BookForm = () => {
     const [user] = useContext(UserContext);
     const [selectedService] = useContext(ServiceContext);
     const stripePromise = loadStripe('pk_test_6pRNASCoBOKtIshFeQd4XMUh');
     const [isTransferingData, setIsTransferingData] = useState(false);
+    let history = useHistory();
 
     return (
         <div className='col-lg-9 col-md-7 col-sm-12'>
@@ -43,7 +45,10 @@ const BookForm = () => {
                                     <StripeCardForm setIsTransferingData={setIsTransferingData} />
                                 </Elements>
                             </div>
-                            : <h1>Please Select A service</h1>
+                            : <div>
+                                <h1>Please Select A service</h1>
+                                <button className="btn btn-secondary" onClick={() => history.push("/services")}>Go to Services Page</button>
+                            </div>
                     )
             }
         </div>
