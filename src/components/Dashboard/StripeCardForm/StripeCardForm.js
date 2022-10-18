@@ -68,7 +68,7 @@ const StripeCardForm = ({ setIsTransferingData }) => {
                     projectDescription
                 }
 
-                fetch('https://cryptic-waters-19850.herokuapp.com/addBooking', {
+                fetch('https://triangle-it-server.onrender.com/addBooking', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(newBooking),

@@ -42,7 +42,7 @@ const ServiceTableRow = ({ service, handleDelete, loadServices }) => {
     const handleSubmit = event => {
         event.preventDefault();
         setIsTransferingData(true);
-        fetch(`https://cryptic-waters-19850.herokuapp.com/updateService/${_id}`, {
+        fetch(`https://triangle-it-server.onrender.com/updateService/${_id}`, {
             method: 'PATCH',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(updatedSrvice),

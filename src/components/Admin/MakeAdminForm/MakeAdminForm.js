@@ -11,7 +11,7 @@ const MakeAdminForm = () => {
     const handleSubmit = event => {
         event.preventDefault();
         setIsTransferingData(true);
-        fetch(`https://cryptic-waters-19850.herokuapp.com/addAdmin?email=${email}`, {
+        fetch(`https://triangle-it-server.onrender.com/addAdmin?email=${email}`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
         })

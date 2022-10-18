@@ -4,7 +4,7 @@ const BookingListCard = ({ booking }) => {
     const { bookedServiceId, status, bookedService, frontEndLang, backEndLang, appType, projectDescription } = booking;
     const [serviceInfo, setServiceInfo ] = useState({});
     useEffect(() => {
-        fetch(`https://cryptic-waters-19850.herokuapp.com/services/${bookedServiceId}`)
+        fetch(`https://triangle-it-server.onrender.com/services/${bookedServiceId}`)
         .then(res => res.json())
         .then(data => setServiceInfo(data));
     }, [bookedServiceId])

@@ -7,7 +7,7 @@ const ServiceTable = () => {
 
     const loadServices = () => {
         setIsTransferingData(true);
-        fetch('https://cryptic-waters-19850.herokuapp.com/services')
+        fetch('https://triangle-it-server.onrender.com/services')
             .then(res => res.json())
             .then(data => {
                 setServices(data);
@@ -21,7 +21,7 @@ const ServiceTable = () => {
 
     const handleDelete = id => {
         setIsTransferingData(true);
-        fetch(`https://cryptic-waters-19850.herokuapp.com/deleteService/${id}`, {
+        fetch(`https://triangle-it-server.onrender.com/deleteService/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

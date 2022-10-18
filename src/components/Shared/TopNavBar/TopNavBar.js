@@ -25,7 +25,7 @@ const TopNavBar = () => {
         if (user.email) {
             setIsLoading(true);
             fetch(
-                `https://cryptic-waters-19850.herokuapp.com/isAdmin?email=${user.email}`,
+                `https://triangle-it-server.onrender.com/isAdmin?email=${user.email}`,
                 {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },

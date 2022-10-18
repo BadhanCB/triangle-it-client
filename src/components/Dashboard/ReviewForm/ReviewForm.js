@@ -16,7 +16,7 @@ const ReviewForm = () => {
     const handleSubmit = event => {
         event.preventDefault();
         setIsTransferingData(true);
-        fetch('https://cryptic-waters-19850.herokuapp.com/addReview', {
+        fetch('https://triangle-it-server.onrender.com/addReview', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(review),

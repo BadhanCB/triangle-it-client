@@ -44,7 +44,7 @@ const AddProjectForm = () => {
         formData.append("githubUrl", project.githubUrl);
         formData.append("isFeatured", project.isFeatured);
 
-        fetch("https://cryptic-waters-19850.herokuapp.com/add-project", {
+        fetch("https://triangle-it-server.onrender.com/add-project", {
             method: "POST",
             body: formData,
         })

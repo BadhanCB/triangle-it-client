@@ -3,7 +3,7 @@ import React from 'react';
 const Achievements = () => {
     return (
         <section className='bg-lightDark text-white' style={{ padding: '100px 0' }}>
-            <div className="row p-3">
+            <div className="row p-3 mx-auto">
                 <div className="col-lg-3 col-md-4 col-sm-6 border-start border-end mt-4">
                     <h4>Successful work with</h4>
                     <h1>1790</h1>

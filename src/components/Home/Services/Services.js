@@ -8,7 +8,7 @@ const Services = () => {
 
     useEffect(() => {
         setIsReceivingData(true);
-        fetch('https://cryptic-waters-19850.herokuapp.com/services')
+        fetch('https://triangle-it-server.onrender.com/services')
             .then(res => res.json())
             .then(data => {
                 setServices(data);

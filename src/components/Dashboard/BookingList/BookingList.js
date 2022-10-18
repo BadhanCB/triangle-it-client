@@ -11,7 +11,7 @@ const BookingList = () => {
 
     useEffect(() => {
         setIsTransferingData(true);
-        fetch('https://cryptic-waters-19850.herokuapp.com/allBooking', {
+        fetch('https://triangle-it-server.onrender.com/allBooking', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email: user.email }),

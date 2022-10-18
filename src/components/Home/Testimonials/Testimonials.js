@@ -7,7 +7,7 @@ const Testimonials = () => {
 
     useEffect(() => {
         setIsReceivingData(true);
-        fetch('https://cryptic-waters-19850.herokuapp.com/allReviews')
+        fetch('https://triangle-it-server.onrender.com/allReviews')
             .then(res => res.json())
             .then(data => {
                 setTestimonials(data);

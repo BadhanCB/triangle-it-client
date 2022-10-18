@@ -27,7 +27,7 @@ const AddServiceForm = () => {
         formData.append('price', serviceInfo.price);
         formData.append('description', serviceInfo.description);
 
-        fetch('https://cryptic-waters-19850.herokuapp.com/addService', {
+        fetch('https://triangle-it-server.onrender.com/addService', {
             method: 'POST',
             body: formData,
         })

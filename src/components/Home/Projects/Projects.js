@@ -7,7 +7,7 @@ const Projects = () => {
     const [featuredProjects, setFeaturedProjects] = useState([]);
 
     useState(() => {
-        fetch("https://cryptic-waters-19850.herokuapp.com/featured-projects")
+        fetch("https://triangle-it-server.onrender.com/featured-projects")
             .then((res) => res.json())
             .then((data) => setFeaturedProjects(data));
     }, []);

@@ -5,7 +5,7 @@ const OrderTableRow = ({ order }) => {
 
     const handleChange = () => {
         const selectedStatus = document.getElementById(_id).value;
-        fetch('https://cryptic-waters-19850.herokuapp.com/changeBookingStatus', {
+        fetch('https://triangle-it-server.onrender.com/changeBookingStatus', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ status: selectedStatus, id: _id }),
